@@ -1,0 +1,132 @@
+body{
+    background-color: #1A222D;
+    font-family: 'Merriweather' serif;
+    height: 100vh;
+}
+
+.header-main-div{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo{
+    height: 60px;
+    width: 115px;
+    margin: 0px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 20px;
+    color: #ffffff; 
+    cursor: pointer;
+    position: relative; 
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.nav-item.active {
+    color: white; 
+    border: 2px solid #45A29E; 
+    padding: 5px 15px;
+    border-radius: 20px; 
+}
+
+.title-main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 250px ;
+    padding-top: 150px ;
+    padding-bottom: 20pxs;
+    padding-right: 500px;
+    margin: 0;
+}
+
+.title-greeting{
+    color: #45A29E;
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+.title-name{
+    padding: 0px;
+    margin: 0px;
+    font-size: 70px;
+    color: white;
+}
+
+.title-subheader{
+    color: #DBDBDB;
+    font-size: 55px;
+    padding-top: 8px;
+    margin: 0px;
+}
+
+.title-paragraph{
+    color: #DBDBDB;
+    width: 550px;
+    margin: 0px;
+    padding-top: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+}
+
+.title-button{
+    font-size: 25px;
+    padding: 10px 30px; 
+    color: white; 
+    border: 2px solid #45A29E; 
+    background-color: transparent; 
+    border-radius: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px; 
+}
+
+.vertical-text {
+    position: fixed;
+    right: 5%; 
+    top: 80%; 
+    transform: translateY(-50%); 
+    writing-mode: vertical-rl; 
+    text-orientation: mixed; 
+    font-size: 15px; 
+    color: #DBDBDB;
+    letter-spacing: 3px;
+    text-align: center;
+    z-index: 1000; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+}
+
+.vertical-text::after {
+    content: ""; 
+    display: block;
+    width: 1px; 
+    height: 150px; 
+    background-color: #DBDBDB;
+    margin-left: 0px;
+    margin-top: 30px;
+}
+
+.vertical-text:hover {
+    color: #45A29E; 
+}
