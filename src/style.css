@@ -1,6 +1,6 @@
 body{
     background-color: #1A222D;
-    font-family: 'Merriweather' serif;
+    font-family: "Merriweather", serif;
     height: 100vh;
 }
 
@@ -14,8 +14,8 @@ body{
 }
 
 .header-logo{
-    height: 60px;
-    width: 115px;
+    height: 50px;
+    width: 100px;
     margin: 0px;
 }
 
@@ -29,7 +29,7 @@ body{
 }
 
 .nav-item {
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff; 
     cursor: pointer;
     position: relative; 
@@ -55,6 +55,7 @@ body{
     padding-bottom: 20pxs;
     padding-right: 500px;
     margin: 0;
+    margin-bottom: 90px;
 }
 
 .title-greeting{
@@ -69,6 +70,7 @@ body{
     margin: 0px;
     font-size: 70px;
     color: white;
+    font-weight: 700;
 }
 
 .title-subheader{
@@ -80,10 +82,10 @@ body{
 
 .title-paragraph{
     color: #DBDBDB;
-    width: 550px;
+    width: 650px;
     margin: 0px;
     padding-top: 25px;
-    line-height: 25px;
+    line-height: 1.6;
     font-size: 20px;
     letter-spacing: 0.3px;
 }
@@ -130,3 +132,209 @@ body{
 .vertical-text:hover {
     color: #45A29E; 
 }
+
+.about-section {
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block; 
+    padding: 0 20px; 
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    width: 300px; 
+    height: 1px; 
+    background-color: white; 
+    transform: translateY(-50%); 
+}
+
+.section-title::before {
+    left: -330px; 
+}
+
+.section-title::after {
+    right: -330px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.about-text {
+    flex: 1;
+    align-items: flex-start;
+    color: #DBDBDB;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.about-image {
+    flex: 0.5;
+    align-self: flex-start;
+    
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.technologies {
+    display: flex; 
+    justify-content: start; 
+    gap: 150px; 
+    max-width: 800px; 
+    margin: 30px 50px; 
+}
+
+.technologies ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.technologies li {
+    font-size: 18px; 
+    line-height: 2; 
+    color: white; 
+    position: relative; 
+}
+
+.technologies li::before {
+    content: '▹'; 
+    position: absolute;
+    left: -20px; 
+    color: #45A29E; 
+    font-size: 18px; 
+}
+
+.projects-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 70px auto;
+    text-align: justify;
+    padding-top: 0px;
+    margin-top: 80px;
+    cursor: pointer;
+  }
+  
+  .project-card {
+    background-color: #171B21;
+    color: #B9B9B9;
+    border-radius: 3px;
+    padding: 20px;
+    width: 360px;
+    height: 350px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .project-card-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #45A29E;
+    margin-bottom: 10px;
+  }
+  
+  .project-card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1; 
+    margin-bottom: 15px;
+  }
+  
+  .project-card-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: auto; 
+  }
+  
+  .project-card-technologies span {
+    background-color: transparent;
+    color: #B9B9B9;
+    padding: 5px 2px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  
+  .services-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    max-width: 7700px; 
+  }
+  
+  .service-card {
+    background-color: transparent;
+    color: #B9B9B9;
+    border-radius: 25px;
+    padding: 40px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 30%; 
+    height: auto; 
+    width: 300px;
+    height: 200px; 
+    margin-top: 40px;
+  }
+  
+  .service-card-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #45A29E;
+    margin-top: 7px;
+  }
+  
+  .service-card-description {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-top: 5px;
+  }
+  
