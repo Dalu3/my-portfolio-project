@@ -44,6 +44,17 @@ body{
     border-radius: 20px; 
 }
 
+.nav-link {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #45A29E; 
+}
+
 .title-main-div{
     display: flex;
     align-items: center;
@@ -145,7 +156,7 @@ body{
     color: white;
     position: relative;
     display: inline-block; 
-    padding: 0 20px; 
+    padding: 12px 20px; 
 }
 
 .section-title::before,
@@ -239,7 +250,7 @@ body{
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin: 70px auto;
+    margin: 10px auto;
     text-align: justify;
     padding-top: 0px;
     margin-top: 80px;
@@ -291,7 +302,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: auto; 
+    padding-bottom: 9px;
   }
   
   .project-card-technologies span {
@@ -306,15 +317,16 @@ body{
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 30px;
+    gap: 40px;
     max-width: 7700px; 
+    padding-top: 60px;
   }
   
   .service-card {
     background-color: transparent;
     color: #B9B9B9;
     border-radius: 25px;
-    padding: 40px;
+    padding:40px;
     border: 1px solid #ffffff;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -322,7 +334,7 @@ body{
     height: auto; 
     width: 300px;
     height: 200px; 
-    margin-top: 40px;
+    margin-top: 0px;
   }
   
   .service-card-title {
@@ -337,4 +349,114 @@ body{
     line-height: 1.8;
     padding-top: 5px;
   }
+  
+  .contact-main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 130px;
+  }
+
+  .contact-question{
+    color: #45A29E; 
+    font-size: 18px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-get-in-touch{
+    color: white;
+    font-size: 70px;
+    padding-top: 20px;
+    margin: 0px;
+  }
+
+  .contact-paragraph{
+    color: #B9B9B9;
+    width: 700px;
+    line-height: 1.8;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-button{
+    font-size: 25px;
+    padding: 10px 30px; 
+    color: white; 
+    border: 2px solid #45A29E; 
+    background-color: transparent; 
+    border-radius: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 30px; 
+  }
+
+  .footer {
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+  .footer-line {
+    border: none;
+    border-top: 1px solid #B9B9B9;
+    width: 80%; 
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  
+  .footer-content {
+    color: white;
+
+  }
+  
+  .footer-message {
+    font-size: 18px;
+    color: #B9B9B9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 90px;
+  }
+  
+  .footer-icon-link {
+    text-decoration: none;
+    color: #45A29E; 
+  }
+  
+  .footer-icon {
+    color: #45A29E; 
+    font-size: 20px;
+    margin: 0 5px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #45A29E;
+  }
+  
+  .footer-link:hover {
+    color: #66FCF1;
+  }
+  
+  .footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #B9B9B9;
+    text-align: left; 
+    padding-left: 150px; 
+    margin-bottom: 20px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
+
+
   

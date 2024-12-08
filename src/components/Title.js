@@ -10,7 +10,15 @@ export default function Title(){
             <p className="title-paragraph">
             I am a front-end web developer specialising in building (and sometimes designing) exceptional digital experiences. I enjoy making user interfaces understandable and turning ideas into functional, visually appealing websites.
             </p>
-            <button className="title-button">Get In Touch</button>
+            <button
+            className="title-button"
+            onClick={() => {
+                window.open('mailto:daria.lysunets03@gmail.com', '_self');
+            }}
+            >
+            Get In Touch
+            </button>
+
             <div class="vertical-text">
                 daria.lysunets03@gmail.com
             </div>

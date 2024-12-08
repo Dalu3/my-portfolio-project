@@ -12,6 +12,7 @@ const Projects = () => {
       technologies: ['HTML/CSS', 'JavaScript'],
       folderIcon: <img src={FaFolder} alt="Folder Icon" style={{ width: '35px', height: '35px' }} />,
       githubIcon: <img src={FaGithub} alt="GitHub Icon" style={{ width: '30px', height: '30px' }} />,
+      githubLink: 'https://github.com/Dalu3/javascript--amazon--project.git',
     },
     {
       title: 'YouTube Clone',
@@ -20,6 +21,8 @@ const Projects = () => {
       technologies: ['HTML/CSS'],
       folderIcon: <img src={FaFolder} alt="Folder Icon" style={{ width: '35px', height: '35px' }} />,
       githubIcon: <img src={FaGithub} alt="GitHub Icon" style={{ width: '30px', height: '30px' }} />,
+      githubLink: 'https://github.com/your-repo/youtube-clone',
+
     },
     {
       title: 'Other Projects',
@@ -28,6 +31,7 @@ const Projects = () => {
       technologies: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React'],
       folderIcon: <img src={FaFolder} alt="Folder Icon" style={{ width: '35px', height: '35px' }} />,
       githubIcon: <img src={FaGithub} alt="GitHub Icon" style={{ width: '30px', height: '30px' }} />,
+      githubLink: 'https://github.com/your-repo/youtube-clone',
     },
   ];
 
@@ -43,6 +47,7 @@ const Projects = () => {
           technologies={project.technologies}
           folderIcon={project.folderIcon}
           githubIcon={project.githubIcon}
+          
         />
       ))}
     </div>

@@ -1,20 +1,22 @@
 import React from 'react';
 
-const ProjectCard = ({ title, description, technologies, folderIcon, githubIcon }) => {
+const ProjectCard = ({ title, description, technologies, folderIcon, githubIcon, githubLink }) => {
   return (
-    <div className="project-card">
-      <div className="project-card-header">
-        <span className="folder-icon">{folderIcon}</span>
-        <span className="github-icon">{githubIcon}</span>
+    <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+      <div className="project-card">
+        <div className="project-card-header">
+          <span className="folder-icon">{folderIcon}</span>
+          <span className="github-icon">{githubIcon}</span>
+        </div>
+        <h3 className="project-card-title">{title}</h3>
+        <p className="project-card-description">{description}</p>
+        <div className="project-card-technologies">
+          {technologies.map((tech, index) => (
+            <span key={index}>{tech}</span>
+          ))}
+        </div>
       </div>
-      <h3 className="project-card-title">{title}</h3>
-      <p className="project-card-description">{description}</p>
-      <div className="project-card-technologies">
-        {technologies.map((tech, index) => (
-          <span key={index}>{tech}</span>
-        ))}
-      </div>
-    </div>
+    </a>
   );
 };
 

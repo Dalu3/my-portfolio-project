@@ -3,7 +3,7 @@ import photo from "../images/photo.jpg"
 
 export default function About(){
     return(
-        <section class="about-section">
+        <section id="about" class="about-section">
             <h2 class="section-title">About me</h2>
             <div class="about-container">
                 <div class="about-text">
