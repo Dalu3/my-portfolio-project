@@ -1,23 +1,30 @@
 import React from 'react';
 
-const ProjectCard = ({ title, description, technologies, folderIcon, githubIcon, githubLink }) => {
+const ProjectsCard = ({ title, description, technologies, folderIcon, githubIcon, githubLink }) => {
   return (
-    <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-      <div className="project-card">
-        <div className="project-card-header">
-          <span className="folder-icon">{folderIcon}</span>
-          <span className="github-icon">{githubIcon}</span>
-        </div>
-        <h3 className="project-card-title">{title}</h3>
-        <p className="project-card-description">{description}</p>
-        <div className="project-card-technologies">
-          {technologies.map((tech, index) => (
-            <span key={index}>{tech}</span>
-          ))}
-        </div>
+    <div className="project-card">
+      <div className="project-card-header">
+        {/* Folder Icon */}
+        <span className="folder-icon">
+          <img src={folderIcon} alt="Folder Icon" style={{ width: '35px', height: '35px' }} />
+        </span>
+
+        {/* GitHub Icon */}
+        <span className="github-icon">
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="GitHub Icon" style={{ width: '30px', height: '30px', cursor: 'pointer' }} />
+          </a>
+        </span>
       </div>
-    </a>
+      <h3 className="project-card-title">{title}</h3>
+      <p className="project-card-description">{description}</p>
+      <div className="project-card-technologies">
+        {technologies.map((tech, index) => (
+          <span key={index}>{tech}</span>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default ProjectCard;
+export default ProjectsCard;
