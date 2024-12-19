@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './style.css';
-import "./responsive.css";  
+import './responsive.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import About from './components/About';
@@ -21,9 +21,12 @@ function App() {
   useEffect(() => {
     const circle = document.getElementById('mouse-circle');
 
+    if (!circle) return;
+
     const moveCircle = (e) => {
-      circle.style.left = `${e.pageX}px`;
-      circle.style.top = `${e.pageY}px`;
+      const { clientX, clientY } = e;
+      circle.style.left = `${clientX}px`;
+      circle.style.top = `${clientY}px`;
     };
 
     window.addEventListener('mousemove', moveCircle);

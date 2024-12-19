@@ -42,11 +42,18 @@ body{
   transform: translate(-50%, -50%);
   mix-blend-mode: lighten; 
   z-index: 9999;
-  animation: pulse 2s infinite; 
-  z-index: 2;
+  animation: none;
+
 
 }
+section {
+  overflow: visible; /* Ensure mouse-circle is not clipped */
+}
 
+html, body {
+  overflow: visible;
+}
+ 
 .header-main-div{
     padding: 10px 20px;
     display: flex;
