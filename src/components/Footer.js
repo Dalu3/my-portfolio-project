@@ -2,22 +2,22 @@ import React from "react"
 
 export default function Footer(){
     return(
-        <footer class="footer">
-            <hr class="footer-line" />
-            <div class="footer-content">
-                <p class="footer-message">
+        <footer className="footer">
+            <hr className="footer-line" />
+            <div className="footer-content">
+                <p className="footer-message">
                 Send me a message by email 
-               <a href="mailto:daria.lysunets03@gmail.com" class="footer-icon-link">
-                <i class="footer-icon">🔗</i>
+               <a href="mailto:daria.lysunets03@gmail.com" className="footer-icon-link">
+                <i className="footer-icon">🔗</i>
                 </a>
 
                 or just simply use my 
-                <a href="https://www.linkedin.com/in/daria-lysunets/" target="_blank" class="footer-link">
+                <a href="https://www.linkedin.com/in/daria-lysunets/" target="_blank" className="footer-link">
                     LinkedIn Page
                 </a>
                 </p>
             </div>
-            <p class="footer-copyright">© 2024 Daria Lysunets</p>
+            <p className="footer-copyright">© 2025 Daria Lysunets</p>
         </footer>
     )
 }

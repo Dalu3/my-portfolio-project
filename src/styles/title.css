@@ -1,0 +1,103 @@
+.title-main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    padding: 150px 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.title-greeting {
+    color: #45A29E;
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+.title-name {
+    padding: 0px;
+    margin: 0px;
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+}
+
+.title-subheader {
+    color: #DBDBDB;
+    font-size: 55px;
+    padding-top: 8px;
+    margin: 0px;
+}
+
+.title-paragraph {
+    color: #DBDBDB;
+    margin: 0px;
+    padding-top: 25px;
+    line-height: 1.6;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    max-width: 650px;
+}
+
+.title-button {
+    font-size: 25px;
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid #45A29E;
+    background-color: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.title-button:hover {
+    background-color: #45A29E;
+    color: black;
+}
+
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 570px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards, fadeOut 0.3s ease 2.7s forwards;
+  }
+  
+  .notification.success {
+    background-color: #45a29e; 
+  }
+  
+  .notification.error {
+    background-color: #e74c3c; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  

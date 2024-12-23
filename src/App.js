@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import './style.css';
-import './responsive.css';
+import './styles/App.css';
+import './styles/style.css';
+import "./styles/header.css"
+import "./styles/about.css"
+import "./styles/contact.css"
+import "./styles/footer.css"
+import "./styles/services.css"
+import "./styles/title.css"
+import "./styles/projects.css"
+import './styles/responsive.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import About from './components/About';
