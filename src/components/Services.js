@@ -11,7 +11,7 @@ const Services = () => {
     {
       title: 'Discussion',
       description:
-        'We will analyse your requirements and preferences to ensure that we create an effective website that reflects your unique style and needs.',
+        "We'll analyse your requirements and preferences to ensure that we create an effective website that reflects your unique style and needs.",
     },
     {
       title: 'Plan & Draft',
@@ -24,12 +24,12 @@ const Services = () => {
         'Once the plan is set, I’ll get to work building your website with modern, clean, and functional code.',
     },
     {
-      title: 'Testing and Review',
+      title: 'Testing & Review',
       description:
         'We’ll test the website to ensure it’s responsive, user-friendly, and meets all your expectations.',
     },
     {
-      title: 'Launch and Support',
+      title: 'Launch & Support',
       description:
         'I’ll help you launch your website and provide ongoing support to ensure everything runs smoothly.',
     },

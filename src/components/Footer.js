@@ -17,7 +17,7 @@ export default function Footer(){
                 </a>
                 </p>
             </div>
-            <p className="footer-copyright">© 2025 Daria Lysunets</p>
+            <p className="footer-copyright">© 2024 Daria Lysunets</p>
         </footer>
     )
 }

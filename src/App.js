@@ -8,7 +8,9 @@ import "./styles/footer.css"
 import "./styles/services.css"
 import "./styles/title.css"
 import "./styles/projects.css"
-import './styles/responsive.css';
+import './styles/responsive-small.css';
+import './styles/responsive-mid.css';
+import './styles/responsive-large.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import About from './components/About';

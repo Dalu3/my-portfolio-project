@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React'],
       folderIcon: FaFolder,
       githubIcon: FaGithub,
-      githubLink: 'https://github.com/Dalu3/some-additional-projects.git',
+      githubLink: 'https://github.com/Dalu3?tab=repositories',
     },
   ];
 
