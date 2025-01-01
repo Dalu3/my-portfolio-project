@@ -12,7 +12,7 @@ export default function Footer(){
                 </a>
 
                 or just simply use my 
-                <a href="www.linkedin.com/in/daria-lysunets" target="_blank" className="footer-link">
+                <a href="https://www.linkedin.com/in/daria-lysunets/" target="_blank" className="footer-link">
                     LinkedIn Page
                 </a>
                 </p>
