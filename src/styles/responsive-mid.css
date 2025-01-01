@@ -116,6 +116,7 @@
         margin-bottom: 10px;
         font-size: 14px;
         color: #ffffff;
+        background-color: rgb(36, 45, 58);
         border: 1px solid #ccc;
         border-radius: 5px;
     }
@@ -184,17 +185,20 @@
         order: 2;
         margin-left: 70px;
         margin-bottom: 1PX;
+        
     }
     .technologies ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        font-family: "Merriweather", serif; 
     }
     .technologies li {
         font-size: 15px;
         margin-bottom: 0px;
         margin-top: 0px;
-        font-family: 'Arial', sans-serif;
+        font-family: "Merriweather", serif; 
+
     }
     .section-title {
         font-size: 25px;
@@ -253,6 +257,7 @@
       
     .project-card-technologies span {
         font-size: 10px;
+        color: #45A29E;
     }
     
     .technologies ul {
@@ -270,6 +275,14 @@
     }
     #services {
         padding-top: 0px;
+        scroll-margin-top: -40px; 
+        
+      }
+      #projects{
+        scroll-margin-top: -40px; 
+      }
+
+      #contact{
         scroll-margin-top: -40px; 
       }
     
@@ -415,29 +428,29 @@
   
     .close-icon {
         font-size: 35px;
-        z-index: 20§0px;
+        z-index: 200px;
     }
   
     .nav-list {
       display: none; 
       position: absolute;
-      top: 10%; /* Dropdown just below the header */
-      right: 10px; /* Align to the right */
+      top: 10%; 
+      right: 10px;
       background-color: #1a1a24;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       list-style: none;
       margin: 0;
       padding: 35px 15px;
       
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      width: 200px; /* Fixed width for the dropdown */
-      overflow: hidden; /* Prevent overflow */
+      width: 200px;
+      overflow: hidden; 
     }
   
     .nav-list.open {
-      display: flex; /* Show menu when toggled */
+      display: flex;
     }
   
     .nav-item {
@@ -456,10 +469,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-        z-index: 10; /* Below the menu */
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10; 
       }
-
-  }
-  
-
+    }

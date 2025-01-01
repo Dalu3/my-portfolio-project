@@ -26,7 +26,7 @@ export default function About() {
         </div>
         <div className="about-image">
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            href="www.linkedin.com/in/daria-lysunets"
             target="_blank"
             rel="noopener noreferrer"
           >
