@@ -95,7 +95,8 @@ button:active {
     display: none;
 }
 
-
-
+section {
+    height: 100%;
+}
     
 

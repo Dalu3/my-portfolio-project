@@ -73,7 +73,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     font-size: 16px;
-    background-color: #333;
+    background-color: #131820;
     color: #fff;
     box-sizing: border-box;
   }
@@ -81,6 +81,7 @@
   .form-textarea {
     height: 100px;
     resize: none;
+    background-color: #131820;
   }
 
   .form-submit-button {

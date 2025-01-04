@@ -45,8 +45,7 @@
         width: 100%;
         overflow-x: hidden;
     }
-
-    @media screen and (max-width: 475px) {
+    @media screen and (min-width: 428px) and (max-width: 600px) {
     .title-main-div {
         width: 100%;
         padding: 10px 20px; 
@@ -160,23 +159,31 @@
         color: #DBDBDB;
         order: 1;
         padding: 20px;
+        
     }
+    
     .about-text p {
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 20px;
         padding-left: 10px;
+        
     }
     .about-image {
-        order: 3; 
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        order: 3;
+        width: 100%; /* Ensure container spans full width */
     }
+    
     .about-image img {
-        max-width: 200px; 
-        border-radius: 10%; 
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-        transition: none; 
-        margin-left: 55%;
-    }
+        max-width: 200px;
+        border-radius: 10%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: none;
+    
+        }
     .technologies {
         display: flex;
         justify-content: flex-start;
@@ -194,7 +201,7 @@
         font-family: "Merriweather", serif; 
     }
     .technologies li {
-        font-size: 15px;
+        font-size: 15px ;
         margin-bottom: 0px;
         margin-top: 0px;
         font-family: "Merriweather", serif; 
@@ -473,4 +480,40 @@
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 10; 
       }
+
+
     }
+    @media screen and (min-width: 500px) and (max-width: 600px) {
+
+
+      .service-card-title {
+        font-size: 20px; 
+        font-weight: bold;
+        color: #45A29E; 
+        margin: 0px; 
+        padding-top: 15PX;
+      }
+    
+      .service-card-description {
+        font-size: 15px;
+        line-height: 1.5; 
+        margin: 0;
+        text-align: center;
+        padding-top: 15PX;
+        padding-bottom: 15PX;
+        .about-image {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            order: 3;
+            width: 100%; /* Ensure container spans full width */
+        }
+        
+        .about-image img {
+            max-width: 200px;
+            border-radius: 10%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: none;
+        
+            }
+    }}
