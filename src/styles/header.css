@@ -1,33 +1,21 @@
-/* body.css */
-body {
-    background-color: #1A222D;
-    font-family: "Merriweather", serif;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-/* header.css */
 .header-main-div {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #1A222D;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-logo {
-    height: 50px;
     width: 100px;
-    margin: 0px;
+    height: 50px;
     cursor: pointer;
 }
+
 
 .nav-list {
     display: flex;
@@ -44,6 +32,13 @@ body {
     cursor: pointer;
     padding: 5px 15px;
     text-align: center;
+}
+
+.nav-item.active {
+    color: white;
+    border: 2px solid #45A29E;
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
 .nav-link {

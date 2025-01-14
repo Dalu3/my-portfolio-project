@@ -315,7 +315,6 @@ and (max-width: 427px) {
     }
     .footer {
         text-align: center;
-        padding: 50px 20px 0px 20px;
     }
       
     .footer-line {
@@ -434,6 +433,7 @@ and (max-width: 427px) {
 .header-logo{
     height: 40px;
     width: 80px;
+    cursor: pointer;
     margin: 0px;
 }
         

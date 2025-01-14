@@ -19,10 +19,9 @@ export default function Header() {
 
   // Scroll to top when logo is clicked
   const scrollToTop = () => {
-    console.log("Scrolling to top..."); // Debug log
     window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scrolling
+        top: 0,
+        behavior: "smooth",
     });
     setMenuOpen(false); // Close the menu if it's open
   };
@@ -45,12 +44,14 @@ export default function Header() {
     <header className="header-main-div" ref={menuRef}>
       {/* Logo */}
       <img
-        className="header-logo"
-        src={logo}
-        alt="Logo"
-        onClick={scrollToTop} // Scroll to top when clicked
-        style={{ cursor: "pointer" }}
-      />
+    className="header-logo"
+    src={logo}
+    alt="Logo"
+    onClick={scrollToTop}
+    style={{ cursor: "pointer" }}
+/>
+
+
 
       {/* Hamburger menu button */}
       <button className="menu-icon" onClick={toggleMenu}>
