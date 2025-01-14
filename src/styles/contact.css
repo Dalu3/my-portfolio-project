@@ -31,7 +31,7 @@
 
 .contact-button{
     font-size: 25px;
-    padding: 10px 30px; 
+    padding: 15px 30px; 
     color: white; 
     border: 2px solid #45A29E; 
     background-color: transparent; 
@@ -71,6 +71,7 @@
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
+    font-family: "Merriweather", serif;
     border-radius: 15px;
     font-size: 16px;
     background-color: #131820;
@@ -86,11 +87,12 @@
 
   .form-submit-button {
     font-size: 19px;
-    padding: 10px 30px;
+    padding: 15px 30px;
     background-color: #45A29E;
     color: white;
     border: none;
     border-radius: 30px;
+    font-family: "Merriweather", serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }

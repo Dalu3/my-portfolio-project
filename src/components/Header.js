@@ -3,28 +3,39 @@ import logo from "../images/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Reference to the menu element
+  const menuRef = useRef(null);
 
+  // Toggle the menu
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => !prev);
   };
 
+  // Close menu if clicked outside
   const handleClickOutside = (event) => {
-    // Check if the click happened outside the menu and menu icon
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
     }
   };
 
+  // Scroll to top when logo is clicked
+  const scrollToTop = () => {
+    console.log("Scrolling to top..."); // Debug log
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+    setMenuOpen(false); // Close the menu if it's open
+  };
+
+  // Add/remove event listener for clicks outside the menu
   useEffect(() => {
-    // Attach the event listener to the document
     if (menuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
-    // Cleanup the event listener on component unmount
+    // Cleanup event listener on unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -32,7 +43,16 @@ export default function Header() {
 
   return (
     <header className="header-main-div" ref={menuRef}>
-      <img className="header-logo" src={logo} alt="Logo" />
+      {/* Logo */}
+      <img
+        className="header-logo"
+        src={logo}
+        alt="Logo"
+        onClick={scrollToTop} // Scroll to top when clicked
+        style={{ cursor: "pointer" }}
+      />
+
+      {/* Hamburger menu button */}
       <button className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? (
           <span className="close-icon">&times;</span>
@@ -40,6 +60,8 @@ export default function Header() {
           <span className="hamburger-icon">&#9776;</span>
         )}
       </button>
+
+      {/* Navigation menu */}
       <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
         <li className="nav-item">
           <a href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>

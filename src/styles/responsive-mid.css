@@ -355,7 +355,7 @@
     
     .contact-button{
         font-size: 20px;
-        padding: 10px 30px; 
+        padding: 15px 30px; 
         color: white; 
         border: 2px solid #45A29E; 
         background-color: transparent; 
@@ -420,8 +420,11 @@
     }
 
     .header-main-div {
-        position: relative; 
-        z-index: 10;  
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #1A222D;
+
     }
     
     .menu-icon {
