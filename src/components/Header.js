@@ -17,12 +17,9 @@ export default function Header() {
     }
   };
 
-  // Scroll to top when logo is clicked
-  const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
+  // Refresh the page when logo is clicked
+  const refreshPage = () => {
+    window.location.reload(); // Refresh the page
     setMenuOpen(false); // Close the menu if it's open
   };
 
@@ -44,14 +41,12 @@ export default function Header() {
     <header className="header-main-div" ref={menuRef}>
       {/* Logo */}
       <img
-    className="header-logo"
-    src={logo}
-    alt="Logo"
-    onClick={scrollToTop}
-    style={{ cursor: "pointer" }}
-/>
-
-
+        className="header-logo"
+        src={logo}
+        alt="Logo"
+        onClick={refreshPage} // Refresh the page on click
+        style={{ cursor: "pointer" }}
+      />
 
       {/* Hamburger menu button */}
       <button className="menu-icon" onClick={toggleMenu}>
