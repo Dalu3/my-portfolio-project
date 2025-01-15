@@ -1,21 +1,16 @@
 {
-    "name": "My Portfolio",
-    "short_name": "Portfolio",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
-    "icons": [
+  "short_name": "Daria",
+  "name": "Daria Lysunets - Web Developer",
+  "description": "Discover my journey in web development. Explore projects, services, and contact me for collaborations.",
+  "icons": [
       {
-        "src": "favicon.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "favicon.png",
-        "sizes": "512x512",
-        "type": "image/png"
+          "src": "./favicon.ico",
+          "sizes": "64x64 32x32 24x24 16x16",
+          "type": "image/x-icon"
       }
-    ]
-  }
-  
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
