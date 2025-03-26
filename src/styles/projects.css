@@ -133,3 +133,13 @@
     transform: scale(1); 
     filter: brightness(1); 
 }
+
+.website-icon:hover {
+    transform: scale(1.2); 
+    filter: brightness(1.5);
+  }
+  
+  .website-icon:active {
+    transform: scale(1); 
+    filter: brightness(1); 
+  }

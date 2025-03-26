@@ -1,7 +1,8 @@
 import React from 'react';
 import ProjectsCard from './ProjectsCard'; 
 import FaFolder from '../icons/Folder.png'; 
-import FaGithub from '../icons/Github.png'; 
+import FaGithub from '../icons/Github.png';
+import WebsiteIcon from '../icons/Website.png';  
 
 const Projects = () => {
   const projectData = [
@@ -10,9 +11,10 @@ const Projects = () => {
       description:
         'A modern, easy-to-use website built for a private doctor to provide patients with a professional online experience. Although the website is in Ukrainian, you’re welcome to explore the link to see the layout, structure, and overall design in action.',
       technologies: ['HTML/CSS', 'JavaScript', 'React'],
-      folderIcon: FaFolder,
+      folderIcon: WebsiteIcon,
       githubIcon: FaGithub,
       githubLink: 'https://github.com/Dalu3/ponomarenko-doctor.git',
+      liveLink: 'https://anastasiiaponomarenko.com',
     },
     {
       title: 'Amazon Clone',
@@ -47,6 +49,7 @@ const Projects = () => {
             folderIcon={project.folderIcon}
             githubIcon={project.githubIcon}
             githubLink={project.githubLink} 
+            liveLink={project.liveLink} 
           />
         ))}
       </div>
