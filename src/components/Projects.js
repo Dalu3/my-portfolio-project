@@ -6,6 +6,15 @@ import FaGithub from '../icons/Github.png';
 const Projects = () => {
   const projectData = [
     {
+      title: 'Private Doctor Website',
+      description:
+        'A modern, easy-to-use website built for a private doctor to provide patients with a professional online experience. Although the website is in Ukrainian, you’re welcome to explore the link to see the layout, structure, and overall design in action.',
+      technologies: ['HTML/CSS', 'JavaScript', 'React'],
+      folderIcon: FaFolder,
+      githubIcon: FaGithub,
+      githubLink: 'https://github.com/Dalu3/ponomarenko-doctor.git',
+    },
+    {
       title: 'Amazon Clone',
       description:
         'A clone of the famous Amazon website which allows you to browse products, add them to your basket and place an order with an interface close to the official website.',
@@ -22,15 +31,6 @@ const Projects = () => {
       folderIcon: FaFolder,
       githubIcon: FaGithub,
       githubLink: 'https://github.com/Dalu3/YouTube-clone.git',
-    },
-    {
-      title: 'Other Projects',
-      description:
-        'I’ve built a variety of projects, some examples include Quizzical app, Tenses Game, Meme/Jokes Generator, To-do List, Coin Flip Game, Rock-Paper-Scissors game, and many more. Check out my GitHub to explore the code behind these projects.',
-      technologies: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React'],
-      folderIcon: FaFolder,
-      githubIcon: FaGithub,
-      githubLink: 'https://github.com/Dalu3?tab=repositories',
     },
   ];
 

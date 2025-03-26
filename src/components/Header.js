@@ -5,25 +5,21 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Toggle the menu
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  // Close menu if clicked outside
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
     }
   };
 
-  // Refresh the page when logo is clicked
   const refreshPage = () => {
-    window.location.reload(); // Refresh the page
-    setMenuOpen(false); // Close the menu if it's open
+    window.location.reload(); 
+    setMenuOpen(false);
   };
 
-  // Add/remove event listener for clicks outside the menu
   useEffect(() => {
     if (menuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -31,7 +27,6 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
-    // Cleanup event listener on unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -39,16 +34,14 @@ export default function Header() {
 
   return (
     <header className="header-main-div" ref={menuRef}>
-      {/* Logo */}
       <img
         className="header-logo"
         src={logo}
         alt="Logo"
-        onClick={refreshPage} // Refresh the page on click
+        onClick={refreshPage} 
         style={{ cursor: "pointer" }}
       />
 
-      {/* Hamburger menu button */}
       <button className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? (
           <span className="close-icon">&times;</span>
@@ -57,7 +50,6 @@ export default function Header() {
         )}
       </button>
 
-      {/* Navigation menu */}
       <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
         <li className="nav-item">
           <a href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>
