@@ -3,8 +3,10 @@ import './styles/App.css';
 import './styles/style.css';
 import "./styles/header.css"
 import "./styles/about.css"
+import "./styles/Education.css"
 import "./styles/contact.css"
 import "./styles/footer.css"
+import './styles/Experience.css'
 import "./styles/services.css"
 import "./styles/title.css"
 import "./styles/projects.css"
@@ -14,8 +16,9 @@ import './styles/responsive-large.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import About from './components/About';
+import Education from './components/Education';
+import Experience from './components/Experience'
 import Projects from './components/Projects';
-import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -60,11 +63,14 @@ function App() {
           <section id="about">
             <About />
           </section>
+          <section id='education'>
+            <Education />
+          </section>
+          <section id='experience'>
+            <Experience />
+          </section>
           <section id="projects">
             <Projects />
-          </section>
-          <section id="services">
-            <Services />
           </section>
           <section id="contact">
             <Contact />

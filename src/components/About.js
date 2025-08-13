@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../images/photo.jpg";
+import photo from "../images/photo.png";
 
 export default function About() {
   return (
@@ -13,9 +13,9 @@ export default function About() {
           <p>Here are a few technologies I’ve been working with recently:</p>
           <div className="technologies">
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>HTML & CSS</li>
               <li>JavaScript</li>
+              <li>Vite</li>
             </ul>
             <ul>
               <li>TypeScript</li>

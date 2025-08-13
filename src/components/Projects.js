@@ -6,33 +6,29 @@ import WebsiteIcon from '../icons/Website.png';
 
 const Projects = () => {
   const projectData = [
+     {
+      title: 'Dashly Studio',
+      description:
+        'Official website for web development studio, designed to present services, convert visitors into clients and making it effortless for clients to get in touch.',
+      technologies: ['HTML/CSS', 'JavaScript',  'React', 'Vite'],
+      folderIcon: WebsiteIcon, 
+      liveLink: 'https://dashly.studio/',
+    },
     {
       title: 'Private Doctor Website',
       description:
-        'A modern, easy-to-use website built for a private doctor to provide patients with a professional online experience. Although the website is in Ukrainian, you’re welcome to explore the link to see the layout, structure, and overall design in action.',
+        'A modern, user-friendly website for a private doctor, offering patients a professional online experience. The site is in Ukrainian but open for exploring its layout and design.',
       technologies: ['HTML/CSS', 'JavaScript', 'React'],
       folderIcon: WebsiteIcon,
-      githubIcon: FaGithub,
-      githubLink: 'https://github.com/Dalu3/ponomarenko-doctor.git',
       liveLink: 'https://anastasiiaponomarenko.com',
     },
     {
-      title: 'Amazon Clone',
+      title: 'Portfolio Web',
       description:
-        'A clone of the famous Amazon website which allows you to browse products, add them to your basket and place an order with an interface close to the official website.',
-      technologies: ['HTML/CSS', 'JavaScript'],
-      folderIcon: FaFolder, 
-      githubIcon: FaGithub, 
-      githubLink: 'https://github.com/Dalu3/javascript--amazon--project.git', 
-    },
-    {
-      title: 'YouTube Clone',
-      description:
-        'A clone of the YouTube website with a layout similar to the official site, allowing users to explore video content and interact with a familiar interface.',
-      technologies: ['HTML/CSS'],
-      folderIcon: FaFolder,
-      githubIcon: FaGithub,
-      githubLink: 'https://github.com/Dalu3/YouTube-clone.git',
+        'A personal portfolio website built to present skills, showcase projects, and provide a clean, user-friendly way for potential clients or employers to get in touch.',
+      technologies: ['HTML/CSS', 'JavaScript',  'React'],
+      folderIcon: WebsiteIcon,
+      liveLink: 'https://darialysunets.com',
     },
   ];
 
@@ -47,8 +43,6 @@ const Projects = () => {
             description={project.description}
             technologies={project.technologies}
             folderIcon={project.folderIcon}
-            githubIcon={project.githubIcon}
-            githubLink={project.githubLink} 
             liveLink={project.liveLink} 
           />
         ))}
