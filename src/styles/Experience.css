@@ -212,3 +212,82 @@
         color: #fff;
     }
 }
+@media screen and (min-width: 20px) and (max-width: 427px) {
+    .timeline {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .timeline-date {
+        border-left: 2px solid #dbdbdb;
+        padding-left: 12px;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 40px;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #dbdbdb;
+    }
+
+    .timeline-item {
+        display: flex;
+        flex-direction: column;
+        column-gap: 5px;
+        align-items: start;
+        position: relative;
+        padding-left: 40px;
+        margin: 60px 0 0 0;
+    }
+
+    .timeline-date {
+        justify-self: stretch;
+        box-sizing: border-box;
+        border-left: none;
+        padding-left: 15px;
+        text-align: left;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 1.2;
+        padding-top: 7px;
+        color: #dbdbdb;
+        opacity: 0.8;
+        font-weight: 400;
+    }
+
+    .timeline-company {
+        font-size: 15px;
+    }
+    .timeline-location {
+        font-size: 15px;
+    }
+    .job-type {
+        font-size: 15px;
+        opacity: 0.8;
+        color: #dbdbdb;
+    }
+    .timeline-title {
+        margin-right: 30px;
+    }
+
+    .timeline-date::before {
+        content: none;
+    }
+
+    .timeline-title {
+        font-size: 20px;
+        color: #fff;
+    }
+}

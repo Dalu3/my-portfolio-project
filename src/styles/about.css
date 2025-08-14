@@ -19,7 +19,7 @@
 .about-text {
     flex: 1;
     align-items: flex-start;
-    color: #DBDBDB;
+    color: #dbdbdb;
 }
 
 .about-text p {
@@ -43,6 +43,6 @@
 }
 
 .about-image img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
