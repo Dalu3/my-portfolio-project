@@ -57,3 +57,125 @@
 .education-card-location {
     text-align: right;
 }
+@media screen and (min-width: 600px) and (max-width: 1030px) {
+    .edu-container {
+        display: grid;
+        grid-template-columns: minmax(300px, 400px);
+        gap: 40px;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 60px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    .education-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: transparent;
+        color: #b9b9b9;
+        border-radius: 25px;
+        padding: 30px;
+        border: 1px solid #ffffff;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        min-height: 250px;
+        box-sizing: border-box;
+    }
+
+    .education-card-period {
+        color: #45a29e;
+        font-size: 22px;
+    }
+
+    .education-card-title {
+        font-size: 22px;
+        font-weight: 500;
+        color: #dbdbdb;
+        margin: 0;
+        padding: 1.5rem 0rem 1.5rem 0rem;
+    }
+
+    .education-card-degree {
+        font-size: 16px;
+        padding-top: 0rem;
+        color: #dbdbdb;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    .education-card-details {
+        margin-top: auto;
+        font-size: 16px;
+        color: #dbdbdb;
+        opacity: 0.8;
+        padding-top: 0.5rem;
+    }
+
+    .education-card-location {
+        text-align: right;
+    }
+}
+@media screen and (min-width: 428px) and (max-width: 600px) {
+    .edu-container {
+        display: grid;
+        grid-template-columns: minmax(250px, 350px);
+        gap: 40px;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 60px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    .education-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: transparent;
+        color: #b9b9b9;
+        border-radius: 25px;
+        padding: 30px;
+        border: 1px solid #ffffff;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        min-height: 250px;
+        box-sizing: border-box;
+    }
+
+    .education-card-period {
+        color: #45a29e;
+        font-size: 20px;
+    }
+
+    .education-card-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #dbdbdb;
+        margin: 0;
+        padding: 1.5rem 0rem 1.5rem 0rem;
+    }
+
+    .education-card-degree {
+        font-size: 15px;
+        padding-top: 0rem;
+        color: #dbdbdb;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    .education-card-details {
+        margin-top: auto;
+        font-size: 15px;
+        color: #dbdbdb;
+        opacity: 0.8;
+        padding-top: 0.5rem;
+    }
+
+    .education-card-location {
+        text-align: right;
+    }
+}

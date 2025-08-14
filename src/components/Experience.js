@@ -4,19 +4,19 @@ const experienceData = [
   {
     title: "Public Relations Manager",
     company: "ProNGO!",
-    location: "Remote - Contract",
+    location: "Remote",
     date: "JUN 2025 – PRESENT",
   },
   {
     title: "Student Ambassador (Registration Support)",
     company: "University of Aberdeen",
-    location: "Aberdeen, Scotland, UK - Part-time",
+    location: "Aberdeen, Scotland, UK",
     date: "JAN 2025 – PRESENT",
   },
   {
     title: "Office Administrator & Social Media Assistant",
     company: "JOR Property ltd",
-    location: "Aberdeen, Scotland, UK - On-site",
+    location: "Aberdeen, Scotland, UK",
     date: "MAR 2024 – SEP 2024",
   },
   {
@@ -28,13 +28,13 @@ const experienceData = [
   {
     title: "Personal Assistant",
     company: "Barwell Enterprises",
-    location: "Aberdeen, Scotland, UK - On-site",
+    location: "Aberdeen, Scotland, UK",
     date: "OCT 2022 – MAR 2023",
   },
   {
     title: "Administrative Assistant",
     company: "Egalite International",
-    location: "Dnipro, Ukraine - Remote",
+    location: "Remote",
     date: "AUG 2022 – DEC 2022",
   },
 ];
@@ -51,6 +51,7 @@ export default function Experience() {
               <h3 className="timeline-title">{exp.title}</h3>
               <p className="timeline-company">{exp.company}</p>
               <p className="timeline-location">{exp.location}</p>
+              <p className="job-type">{exp.jobType}</p>
             </div>
             <div className="timeline-date">{exp.date}</div>
           </div>

@@ -69,3 +69,14 @@
 .footer-link-cv:hover {
     color: #45a29e;
 }
+@media screen and (min-width: 60px) and (max-width: 1030px) {
+    .footer-link-cv {
+        margin-bottom: 30px;
+    }
+    .footer-copyright p {
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 150px;
+        margin-bottom: 20px;
+    }
+}
