@@ -4,21 +4,21 @@ import EducationCard from "./EducationCard";
 
 const educationData = [
   {
-     school: "ALFRED NOBEL UNIVERSITY",
+     school: "Alfred Nobel University",
     degree: "Philology",
     period: "2020–2024",
     location: "Dnipro, Ukraine",
   },
   {
-    school: "NORTH EAST COLLEGE",
+    school: "North East College",
     degree: "ESOL English course",
     period: "2023",
     location: "Aberdeen, Scotland, UK",
   },
   {
-     school: "UNIVERSITY OF ABERDEEN",
+     school: "University of Aberdeen",
     degree: "Business Management & International Relations",
-    period: "2023–2026",
+    period: "2023–2027",
     location: "Aberdeen, Scotland, UK",
   },
 ];

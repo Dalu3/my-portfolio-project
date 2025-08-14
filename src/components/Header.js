@@ -56,14 +56,21 @@ export default function Header() {
             About
           </a>
         </li>
-        <li className="nav-item">
+          <li className="nav-item">
           <a href="#projects" className="nav-link" onClick={() => setMenuOpen(false)}>
             Projects
           </a>
         </li>
+
         <li className="nav-item">
-          <a href="#services" className="nav-link" onClick={() => setMenuOpen(false)}>
-            Services
+          <a href="#experience" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Experience
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a href="#education" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Education
           </a>
         </li>
         <li className="nav-item">

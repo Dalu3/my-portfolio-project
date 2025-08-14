@@ -2,37 +2,37 @@ import React from "react";
 
 const experienceData = [
   {
-    title: "PUBLIC RELATIONS MANAGER",
+    title: "Public Relations Manager",
     company: "ProNGO!",
     location: "Remote - Contract",
     date: "JUN 2025 – PRESENT",
   },
   {
-    title: "STUDENT AMBASSADOR (REGISTRATION SUPPORT)",
+    title: "Student Ambassador (Registration Support)",
     company: "University of Aberdeen",
     location: "Aberdeen, Scotland, UK - Part-time",
     date: "JAN 2025 – PRESENT",
   },
   {
-    title: "OFFICE ADMINISTRATOR & SOCIAL MEDIA ASSISTANT",
+    title: "Office Administrator & Social Media Assistant",
     company: "JOR Property ltd",
     location: "Aberdeen, Scotland, UK - On-site",
     date: "MAR 2024 – SEP 2024",
   },
   {
-    title: "WEB DEVELOPER",
+    title: "Web Developer",
     company: "Freelance",
     location: "Remote",
     date: "JAN 2023 – PRESENT",
   },
   {
-    title: "PERSONAL ASSISTANT",
+    title: "Personal Assistant",
     company: "Barwell Enterprises",
     location: "Aberdeen, Scotland, UK - On-site",
     date: "OCT 2022 – MAR 2023",
   },
   {
-    title: "ADMINISTRATIVE ASSISTANT",
+    title: "Administrative Assistant",
     company: "Egalite International",
     location: "Dnipro, Ukraine - Remote",
     date: "AUG 2022 – DEC 2022",

@@ -31,23 +31,24 @@
 }
 
 .education-card-title {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 500;
     color: #dbdbdb;
     margin: 0;
-    padding: 1.5rem 0rem 1rem 0rem;
-    font-weight: bold;
+    padding: 1.5rem 0rem 1.5rem 0rem;
 }
 
 .education-card-degree {
-    font-size: 20px;
+    font-size: 16px;
     padding-top: 0rem;
     color: #dbdbdb;
     margin: 0;
+    opacity: 0.8;
 }
 
 .education-card-details {
     margin-top: auto;
-    font-size: 20px;
+    font-size: 16px;
     color: #dbdbdb;
     opacity: 0.8;
     padding-top: 0.5rem;
