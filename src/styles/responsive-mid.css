@@ -124,7 +124,7 @@ body {
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 20px;
-        text-align: center;
+        text-align: justify;
         padding-left: 10px;
     }
 
@@ -147,7 +147,7 @@ body {
     .technologies {
         display: flex;
         justify-content: flex-start;
-        gap: 100px;
+        gap: 60px;
         margin-top: 20px;
 
         justify-content: center;
