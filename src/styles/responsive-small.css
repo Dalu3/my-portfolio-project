@@ -167,6 +167,9 @@
         margin-top: 0px;
         font-family: "Merriweather", serif;
     }
+    .technologies li::before {
+        top: -5px;
+    }
 
     .section-title {
         font-size: 20px;
@@ -242,6 +245,9 @@
 
     #about {
         scroll-margin-top: -40px;
+    }
+    #education {
+        scroll-margin-top: -15px;
     }
 
     .services-container {

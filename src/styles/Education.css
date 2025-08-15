@@ -55,7 +55,7 @@
 }
 
 .education-card-location {
-    text-align: right;
+    text-align: center;
 }
 @media screen and (min-width: 600px) and (max-width: 1030px) {
     .edu-container {
@@ -115,7 +115,7 @@
     }
 
     .education-card-location {
-        text-align: right;
+        text-align: center;
     }
 }
 @media screen and (min-width: 428px) and (max-width: 600px) {
@@ -176,7 +176,7 @@
     }
 
     .education-card-location {
-        text-align: right;
+        text-align: center;
     }
 }
 @media screen and (min-width: 20px) and (max-width: 427px) {
@@ -237,6 +237,6 @@
     }
 
     .education-card-location {
-        text-align: right;
+        text-align: center;
     }
 }

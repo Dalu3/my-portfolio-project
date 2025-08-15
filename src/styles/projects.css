@@ -110,6 +110,7 @@
 
 .technologies li::before {
     content: "▹";
+    top: -2px;
     position: absolute;
     left: -20px;
     color: #45a29e;
