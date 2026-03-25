@@ -8,6 +8,7 @@
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    isolation: isolate;
 }
 
 .header-logo {
@@ -16,6 +17,11 @@
     cursor: pointer;
 }
 
+.header-nav-shell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
 .nav-list {
     display: flex;
@@ -50,4 +56,84 @@
 
 .nav-link:hover {
     color: #45A29E;
+}
+
+.menu-icon {
+    display: none;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.menu-icon:active {
+    transform: none;
+}
+
+.menu-icon:focus,
+.menu-icon:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.menu-icon-line {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: #f4f7f9;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.menu-icon-line:nth-child(1) {
+    transform: translateY(-7px);
+}
+
+.menu-icon-line:nth-child(2) {
+    transform: translateY(0);
+}
+
+.menu-icon-line:nth-child(3) {
+    transform: translateY(7px);
+}
+
+.menu-icon.open .menu-icon-line:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.menu-icon.open .menu-icon-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .menu-icon-line:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    border: none;
+    padding: 0;
+    background: rgba(6, 10, 15, 0.58);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 999;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
 }
