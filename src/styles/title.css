@@ -62,45 +62,69 @@
 
 .notification {
     position: fixed;
-    top: 100px;
-    right: 570px;
-    padding: 15px 20px;
-    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(92vw, 500px);
+    padding: 19px 24px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
     font-size: 16px;
-    color: white;
-    z-index: 1000;
+    line-height: 1.45;
+    text-align: center;
+    color: #edf7f7;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    background: linear-gradient(
+        145deg,
+        rgba(20, 28, 40, 0.98) 0%,
+        rgba(13, 20, 31, 0.98) 100%
+    );
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    pointer-events: none;
+    z-index: 12000;
     opacity: 0;
-    animation:
-        fadeIn 0.3s ease forwards,
-        fadeOut 0.3s ease 2.7s forwards;
+    animation: notificationPopup 3s ease forwards;
 }
 
 .notification.success {
-    background-color: #45a29e;
+    border-color: rgba(116, 221, 213, 0.55);
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(69, 162, 158, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .notification.error {
-    background-color: #e74c3c;
+    border-color: rgba(255, 168, 168, 0.52);
+    color: #ffe4e4;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        0 0 16px rgba(228, 106, 106, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-@keyframes fadeIn {
-    from {
+@keyframes notificationPopup {
+    0% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translate(-50%, -54%) scale(0.96);
     }
-    to {
+    12% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, -50%) scale(1);
     }
-}
-
-@keyframes fadeOut {
-    from {
+    88% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, -50%) scale(1);
     }
-    to {
+    100% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translate(-50%, -46%) scale(0.98);
     }
 }

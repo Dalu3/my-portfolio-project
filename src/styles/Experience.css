@@ -291,3 +291,114 @@
         color: #fff;
     }
 }
+
+/* Timeline scroll animation (scoped to Experience only) */
+#experience .timeline {
+    --timeline-progress: 0;
+    isolation: isolate;
+}
+
+#experience .timeline::before {
+    z-index: 0;
+}
+
+#experience .timeline::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #6bc7c1 0%, #44a49e 100%);
+    transform: scaleY(var(--timeline-progress));
+    transform-origin: top;
+    transition: transform 0.08s linear;
+    will-change: transform;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#experience .timeline .timeline-item {
+    position: relative;
+    z-index: 2;
+}
+
+#experience .timeline.timeline-animate .timeline-dot {
+    opacity: 0;
+    transform: scale(0.62);
+    background: linear-gradient(145deg, #e3e9ef 0%, #b0bac6 100%);
+    border: 1px solid #e8eff5;
+    box-sizing: border-box;
+    transition: opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1), background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+    z-index: 3;
+    overflow: hidden;
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.5),
+        0 2px 8px rgba(10, 16, 24, 0.42);
+}
+
+#experience .timeline.timeline-animate .timeline-dot::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: #92a0af;
+    opacity: 1;
+    transform: scale(0.95);
+    transition: opacity 0.45s ease, transform 0.45s ease, background-color 0.45s ease;
+}
+
+#experience .timeline .timeline-dot.is-visible {
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+#experience .timeline .timeline-dot.is-active {
+    opacity: 1;
+    transform: scale(1.04);
+    background: linear-gradient(135deg, #6bc7c1 0%, #44a49e 100%);
+    border-color: #66fcf1;
+    box-shadow:
+        0 0 0 1px rgba(102, 252, 241, 0.35),
+        0 0 12px rgba(102, 252, 241, 0.45),
+        0 8px 16px rgba(69, 162, 158, 0.28);
+}
+
+#experience .timeline .timeline-dot.is-active::after {
+    background: #edfffe;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#experience .timeline-date::before {
+    content: none;
+}
+
+@media screen and (min-width: 20px) and (max-width: 600px) {
+    #experience .timeline::after {
+        left: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #experience .timeline::after {
+        transition: none;
+        transform: scaleY(1);
+    }
+
+    #experience .timeline .timeline-dot {
+        transition: none;
+        opacity: 1;
+        transform: none;
+        background: linear-gradient(135deg, #6bc7c1 0%, #44a49e 100%);
+        border-color: #66fcf1;
+        box-shadow: none;
+    }
+
+    #experience .timeline .timeline-dot::after {
+        transition: none;
+        background: #edfffe;
+        opacity: 1;
+        transform: none;
+    }
+}

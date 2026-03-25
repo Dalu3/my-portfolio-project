@@ -24,6 +24,17 @@
     padding-bottom: 0px;
 }
 
+.project-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card-link:focus-visible {
+    outline: 2px solid #45a29e;
+    outline-offset: 4px;
+}
+
 .project-card-header {
     display: flex;
     justify-content: space-between;

@@ -1,6 +1,45 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const validateField = (field, value) => {
+  const trimmedValue = value.trim();
+
+  if (field === "name") {
+    return trimmedValue ? "" : "Please enter your name.";
+  }
+
+  if (field === "email") {
+    if (!trimmedValue) {
+      return "Please enter your email.";
+    }
+
+    return emailPattern.test(trimmedValue)
+      ? ""
+      : "Please enter a valid email address.";
+  }
+
+  if (field === "message") {
+    return trimmedValue ? "" : "Please add a short message.";
+  }
+
+  return "";
+};
+
+const validateForm = (data) => {
+  const nextErrors = {};
+
+  Object.keys(data).forEach((field) => {
+    const fieldError = validateField(field, data[field]);
+    if (fieldError) {
+      nextErrors[field] = fieldError;
+    }
+  });
+
+  return nextErrors;
+};
+
 export default function Contact() {
   const [showForm, setShowForm] = useState(false); 
   const [formData, setFormData] = useState({
@@ -8,16 +47,39 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
   const [notification, setNotification] = useState(""); 
   const [notificationType, setNotificationType] = useState(""); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    setFormData((previous) => ({ ...previous, [name]: value }));
+
+    setErrors((previous) => {
+      if (!previous[name]) {
+        return previous;
+      }
+
+      const currentFieldError = validateField(name, value);
+      if (currentFieldError) {
+        return { ...previous, [name]: currentFieldError };
+      }
+
+      const updatedErrors = { ...previous };
+      delete updatedErrors[name];
+      return updatedErrors;
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const nextErrors = validateForm(formData);
+
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors);
+      return;
+    }
 
     emailjs
       .send(
@@ -28,8 +90,9 @@ export default function Contact() {
       )
       .then(
         (response) => {
-          setNotification("Thank you for your message, I will be in touch as soon as possible!");
+          setNotification("Thank you!  I’ve received your message and will contact you as soon as possible.");
           setNotificationType("success");
+          setErrors({});
           setShowForm(false); 
           setFormData({ name: "", email: "", message: "" });
           setTimeout(() => setNotification(""), 3000);
@@ -63,33 +126,63 @@ export default function Contact() {
         <div className="form-modal">
           <div className="form-content">
             <h2>Get In Touch</h2>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="form-input"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="form-input"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="form-textarea"
-              ></textarea>
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="form-field">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className={`form-input ${errors.name ? "form-input-error" : ""}`}
+                  aria-invalid={Boolean(errors.name)}
+                  aria-describedby={errors.name ? "contact-name-error" : undefined}
+                />
+                {errors.name && (
+                  <p id="contact-name-error" className="form-field-error">
+                    {errors.name}
+                  </p>
+                )}
+              </div>
+
+              <div className="form-field">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className={`form-input ${errors.email ? "form-input-error" : ""}`}
+                  aria-invalid={Boolean(errors.email)}
+                  aria-describedby={errors.email ? "contact-email-error" : undefined}
+                />
+                {errors.email && (
+                  <p id="contact-email-error" className="form-field-error">
+                    {errors.email}
+                  </p>
+                )}
+              </div>
+
+              <div className="form-field">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className={`form-textarea ${errors.message ? "form-input-error" : ""}`}
+                  aria-invalid={Boolean(errors.message)}
+                  aria-describedby={errors.message ? "contact-message-error" : undefined}
+                ></textarea>
+                {errors.message && (
+                  <p id="contact-message-error" className="form-field-error">
+                    {errors.message}
+                  </p>
+                )}
+              </div>
+
               <button type="submit" className="form-submit-button">
                 Submit
               </button>

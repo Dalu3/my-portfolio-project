@@ -1,7 +1,5 @@
 import React from 'react';
 import ProjectsCard from './ProjectsCard'; 
-import FaFolder from '../icons/Folder.png'; 
-import FaGithub from '../icons/Github.png';
 import WebsiteIcon from '../icons/Website.png';  
 
 const Projects = () => {

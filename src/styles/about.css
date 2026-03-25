@@ -20,6 +20,8 @@
     flex: 1;
     align-items: flex-start;
     color: #dbdbdb;
+    text-align: justify;
+    padding-right: 20px;
 }
 
 .about-text p {
@@ -39,7 +41,9 @@
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition:
+        filter 0.3s ease,
+        transform 0.3s ease;
 }
 
 .about-image img:hover {

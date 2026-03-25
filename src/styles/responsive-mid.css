@@ -49,56 +49,47 @@ body {
     }
     .form-modal {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
+        inset: 0;
+        background-color: rgba(4, 9, 14, 0.72);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 18px;
         box-sizing: border-box;
     }
     .form-content {
         width: 100%;
-        max-width: 350px;
-        background: #1a222d;
-        padding: 20px;
-        border-radius: 30px;
+        max-width: 370px;
+        padding: 26px 18px 20px;
+        border-radius: 26px;
         box-sizing: border-box;
+    }
+    .form-content h2 {
+        font-size: 34px;
+        margin-bottom: 17px;
     }
     .form-input,
     .form-textarea {
         width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: #ffffff;
-        background-color: rgb(36, 45, 58);
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 12px 13px;
+        margin-bottom: 0;
+        font-size: 15px;
+        border-radius: 12px;
     }
-    .form-submit-button,
-    .form-close-button {
+    .form-textarea {
+        min-height: 120px;
+    }
+    .form-submit-button {
         width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        margin-top: 10px;
+        max-width: 230px;
+        padding: 11px 22px;
+        font-size: 19px;
+        margin-top: 8px;
     }
-    .form-input:focus,
-    .form-textarea:focus {
-        outline: none;
-        border: 2px solid #45a29e;
-        box-shadow: 0 0 5px rgba(69, 162, 158, 0.5);
-    }
-    .notification {
-        top: 10%;
-        left: 20%;
-        transform: translateX(-50%);
-        width: 55%;
-        padding: 10px;
-        text-align: center;
+    .form-close-button {
+        width: auto;
+        font-size: 14px;
+        margin-top: 11px;
     }
     .about-section {
         padding-top: 90px;

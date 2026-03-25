@@ -43,75 +43,176 @@
 
 .form-modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    inset: 0;
+    padding: 24px;
+    background: rgba(4, 9, 14, 0.74);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; 
-  }
-  
-  .form-content {
-    background-color: #131820;
-    color: #ffffff;
-    padding: 30px 40px;
-    border-radius: 60px;
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
+    box-sizing: border-box;
+    z-index: 9999;
+}
 
-  .form-input,
-  .form-textarea {
+.form-content {
+    position: relative;
+    width: min(100%, 460px);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 28, 40, 0.98) 0%,
+            rgba(13, 20, 31, 0.98) 100%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+    padding: 34px 32px 24px;
+    border-radius: 30px;
+    text-align: left;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    animation: form-pop-in 0.28s ease;
+}
+
+.form-content h2 {
+    margin: 0 0 22px;
+    text-align: center;
+    color: #f3f8f8;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-input,
+.form-textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 13px 15px;
+    margin-bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.62);
     font-family: "Merriweather", serif;
-    border-radius: 15px;
+    border-radius: 14px;
     font-size: 16px;
-    background-color: #131820;
+    background-color: rgba(10, 16, 25, 0.72);
     color: #fff;
     box-sizing: border-box;
-  }
-  
-  .form-textarea {
-    height: 100px;
-    resize: none;
-    background-color: #131820;
-  }
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
 
-  .form-submit-button {
-    font-size: 19px;
-    padding: 15px 30px;
-    background-color: #45A29E;
-    color: white;
-    border: none;
-    border-radius: 30px;
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(207, 216, 219, 0.66);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #45a29e;
+    box-shadow: 0 0 0 3px rgba(69, 162, 158, 0.2);
+    background-color: rgba(12, 18, 29, 0.9);
+}
+
+.form-textarea {
+    min-height: 130px;
+    resize: none;
+}
+
+.form-input-error {
+    border-color: rgba(255, 176, 176, 0.95);
+    box-shadow: 0 0 0 2px rgba(255, 120, 120, 0.18);
+}
+
+.form-input.form-input-error:focus,
+.form-textarea.form-input-error:focus {
+    border-color: rgba(255, 176, 176, 0.95);
+    box-shadow: 0 0 0 3px rgba(255, 120, 120, 0.2);
+}
+
+.form-field-error {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #f6b3b3;
+    letter-spacing: 0.1px;
+}
+
+.form-submit-button {
+    align-self: center;
+    min-width: 180px;
+    margin-top: 10px;
+    padding: 12px 34px;
+    font-size: 21px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #5eb7b1 0%, #3d8f8a 100%);
+    color: #f5fbfb;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 999px;
     font-family: "Merriweather", serif;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-submit-button:hover {
-    background-color: #318077;
-  }
-  
-  .form-close-button {
-    margin-top: 10px;
-    font-size: 14px;
+    box-shadow: none;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-submit-button:hover {
+    background: linear-gradient(135deg, #6bc7c1 0%, #44a49e 100%);
+    transform: translateY(-1px);
+    box-shadow:
+        0 0 0 1px rgba(102, 252, 241, 0.35),
+        0 0 22px rgba(102, 252, 241, 0.55),
+        0 14px 28px rgba(69, 162, 158, 0.36);
+}
+
+.form-submit-button:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 3px rgba(102, 252, 241, 0.22),
+        0 0 18px rgba(102, 252, 241, 0.45),
+        0 12px 22px rgba(69, 162, 158, 0.3);
+}
+
+.form-close-button {
+    display: block;
+    margin: 13px auto 0;
+    padding: 0;
+    font-size: 15px;
     background: none;
     border: none;
-    color: #ccc;
+    color: #d7e0e0;
     cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .form-close-button:hover {
-    color: white;
-  }
-  
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(148, 160, 166, 0.55);
+    transition: color 0.2s ease;
+}
+
+.form-close-button:hover {
+    color: #66fcf1;
+}
+
+@keyframes form-pop-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

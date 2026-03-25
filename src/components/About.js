@@ -8,7 +8,7 @@ export default function About() {
       <div className="about-container">
         <div className="about-text">
           <p>
-            I am Daria and I love creating and designing user-friendly websites. I am now dedicated to improving my skills in modern web development frameworks such as React. My main goal is to develop high-quality websites and provide users with a positive experience.
+            I’m Daria, a front-end web developer. I focus on building websites that are not only visually clean but also clear, fast, and easy to use. I pay close attention to structure, performance, and user experience, making sure every detail works together. I enjoy turning ideas into real, working products that deliver value.
           </p>
           <p>Here are a few technologies I’ve been working with recently:</p>
           <div className="technologies">
