@@ -7,7 +7,7 @@ const ProjectsCard = ({ title, description, technologies, folderIcon, githubIcon
         <span className="folder-icon">
           <img
             src={folderIcon}
-            alt={liveLink ? "Website Icon" : "Folder Icon"}
+            alt={`Website icon for ${title} project`}
             className={liveLink ? "website-icon" : ""}
             style={{
               width: liveLink ? '30px' : '35px',

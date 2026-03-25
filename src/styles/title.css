@@ -56,8 +56,10 @@
 }
 
 .title-button:hover {
-    background-color: #45a29e;
-    color: black;
+    background-color: transparent;
+    color: white;
+    border-color: #66c8c2;
+    box-shadow: 0 0 10px rgba(69, 162, 158, 0.25);
 }
 
 .notification {

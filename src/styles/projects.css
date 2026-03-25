@@ -19,9 +19,19 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    will-change: transform;
+}
+
+.project-card:hover,
+.project-card-link:hover .project-card,
+.project-card-link:focus-visible .project-card {
+    transform: scale(1.02);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.36);
 }
 
 .project-card-link {

@@ -41,8 +41,10 @@ body {
         margin-top: 10px;
     }
     .title-button:hover {
-        background-color: #45a29e;
-        color: black;
+        background-color: transparent;
+        color: white;
+        border-color: #66c8c2;
+        box-shadow: 0 0 8px rgba(69, 162, 158, 0.22);
     }
     .vertical-text {
         display: none;
@@ -107,7 +109,7 @@ body {
         flex-wrap: wrap;
     }
     .about-text {
-        padding: 30px auto;
+        padding: 0;
         margin: 0px 20px;
     }
 
@@ -116,7 +118,7 @@ body {
         line-height: 1.6;
         margin-bottom: 20px;
         text-align: justify;
-        padding-left: 10px;
+        padding-left: 0 !important;
     }
 
     .about-image {
@@ -125,6 +127,12 @@ body {
         align-items: center;
         order: 3;
         width: 100%;
+    }
+
+    .about-image a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .about-image img {
@@ -136,20 +144,29 @@ body {
     }
 
     .about-technologies {
-        grid-template-columns: repeat(2, minmax(0, max-content));
-        justify-content: center;
-        column-gap: 42px;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: space-between;
+        column-gap: clamp(2px, 1vw, 6px);
         row-gap: 10px;
         width: 100%;
-        margin: 20px auto 1px;
+        max-width: 100%;
+        margin: 18px auto 2px;
+        justify-items: start;
         order: 2;
     }
-    .about-technologies .about-technologies-column:last-child {
-        grid-column: 1 / -1;
+    .about-technologies .about-technologies-column {
+        width: max-content;
     }
     .about-technologies li {
-        font-size: 15px;
+        font-size: 14px;
         white-space: nowrap;
+        line-height: 1.6;
+        padding-left: 10px;
+    }
+    .about-technologies li::before {
+        left: 0;
+        top: -1px;
+        font-size: 14px;
     }
     .section-title {
         font-size: 25px;
@@ -161,10 +178,9 @@ body {
         display: flex;
         gap: 40px;
         flex-direction: column;
-        margin: 10px 10px;
+        margin: 60px 20px 10px;
         align-items: center;
         padding-top: 0px;
-        margin-top: 60px;
     }
 
     .project-card {
@@ -227,6 +243,11 @@ body {
         margin-bottom: 0px;
     }
 
+    .contact-main-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .contact-get-in-touch {
         font-size: 40px;
         padding-top: 20px;
@@ -262,10 +283,12 @@ body {
         border: none;
         border-top: 1px solid #b9b9b9;
         width: 100%;
-        margin-top: 100px;
-        margin-bottom: 60px;
+        margin-top: 72px;
+        margin-bottom: 40px;
     }
-
+    .footer-link-cv {
+        font-size: 18px;
+    }
     .footer-message {
         font-size: 18px;
         color: #b9b9b9;
@@ -276,7 +299,7 @@ body {
         gap: 5px;
         margin-top: 0px;
         padding-top: 0px;
-        margin-bottom: 90px;
+        margin-bottom: 4px;
     }
 
     .footer-icon-link {

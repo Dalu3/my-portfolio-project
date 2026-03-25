@@ -57,6 +57,11 @@ export default function Experience() {
     const dots = Array.from(timeline.querySelectorAll(".timeline-dot"));
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    timeline.classList.add("timeline-animate");
+
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+    const lerp = (start, end, factor) => start + (end - start) * factor;
+
     if (prefersReducedMotion) {
       timeline.style.setProperty("--timeline-progress", "1");
       dots.forEach((dot) => {
@@ -66,21 +71,19 @@ export default function Experience() {
       return;
     }
 
-    timeline.classList.add("timeline-animate");
-
-    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-    const lerp = (start, end, factor) => start + (end - start) * factor;
     let animationFrameId = null;
     let currentProgress = 0;
     let targetProgress = 0;
     let lastFrameTime = null;
 
-    const getTargetProgress = () => {
+    const getRawProgress = () => {
       const rect = timeline.getBoundingClientRect();
+      if (rect.height <= 0) return 0;
+
       const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-      const travelDistance = rect.height + viewportHeight * 0.6;
-      const passedDistance = viewportHeight * 0.8 - rect.top;
-      return clamp(passedDistance / travelDistance, 0, 1);
+      const centerLine = viewportHeight * 0.5;
+      const passedDistance = centerLine - rect.top;
+      return clamp(passedDistance / rect.height, 0, 1);
     };
 
     const renderTimeline = (progress) => {
@@ -93,20 +96,18 @@ export default function Experience() {
         const dotRect = dot.getBoundingClientRect();
         const dotCenterInTimeline = dotRect.top - rect.top + dotRect.height / 2;
         const isVisible = dot.classList.contains("is-visible");
-        const isCurrentlyActive = dot.classList.contains("is-active");
-        const activationEdge = isCurrentlyActive ? filledHeight + 12 : filledHeight - 2;
-        dot.classList.toggle("is-active", isVisible && dotCenterInTimeline <= activationEdge);
+        dot.classList.toggle("is-active", isVisible && dotCenterInTimeline <= filledHeight + 2);
       });
     };
 
     const animateProgress = (timestamp) => {
       const delta = lastFrameTime ? timestamp - lastFrameTime : 16;
       lastFrameTime = timestamp;
-      const ease = 1 - Math.exp(-delta / 180);
+      const ease = 1 - Math.exp(-delta / 58);
 
       currentProgress = lerp(currentProgress, targetProgress, ease);
 
-      if (Math.abs(targetProgress - currentProgress) < 0.0008) {
+      if (Math.abs(targetProgress - currentProgress) < 0.0006) {
         currentProgress = targetProgress;
       }
 
@@ -120,11 +121,19 @@ export default function Experience() {
       }
     };
 
-    const requestUpdate = () => {
-      targetProgress = getTargetProgress();
+    const startAnimation = () => {
       if (animationFrameId !== null) return;
       lastFrameTime = null;
       animationFrameId = window.requestAnimationFrame(animateProgress);
+    };
+
+    const requestUpdate = () => {
+      targetProgress = getRawProgress();
+      startAnimation();
+    };
+
+    const handleResize = () => {
+      requestUpdate();
     };
 
     const dotObserver = new IntersectionObserver(
@@ -148,16 +157,16 @@ export default function Experience() {
 
     items.forEach((item) => dotObserver.observe(item));
 
-    currentProgress = getTargetProgress();
+    currentProgress = getRawProgress();
     targetProgress = currentProgress;
     renderTimeline(currentProgress);
     window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       dotObserver.disconnect();
       window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("resize", requestUpdate);
+      window.removeEventListener("resize", handleResize);
       if (animationFrameId !== null) {
         window.cancelAnimationFrame(animationFrameId);
       }

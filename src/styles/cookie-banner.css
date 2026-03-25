@@ -1,0 +1,97 @@
+.cookie-banner {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1200;
+    width: max-content;
+    max-width: calc(100vw - 40px);
+    padding: 10px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(69, 162, 158, 0.34);
+    background: linear-gradient(135deg, rgba(24, 34, 48, 0.9), rgba(17, 27, 40, 0.92));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cookie-banner-text {
+    margin: 0;
+    color: #dbdbdb;
+    font-size: 14px;
+    line-height: 1.45;
+    flex: none;
+    white-space: nowrap;
+}
+
+.cookie-banner-actions {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.cookie-banner-button {
+    font-family: "Merriweather", serif;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 8px 14px;
+    border: 1px solid rgba(219, 219, 219, 0.4);
+    border-radius: 999px;
+    background: transparent;
+    color: #dbdbdb;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cookie-banner-button:hover {
+    border-color: rgba(219, 219, 219, 0.7);
+    color: #ffffff;
+}
+
+.cookie-banner-button-primary {
+    border-color: #79d0cb;
+    background: #79d0cb;
+    color: #0f1b25;
+    box-shadow: 0 0 14px rgba(121, 208, 203, 0.32);
+}
+
+.cookie-banner-button-primary:hover {
+    border-color: #8de2dc;
+    background: #8de2dc;
+    color: #0f1b25;
+    box-shadow: 0 0 18px rgba(121, 208, 203, 0.48);
+}
+
+@media screen and (max-width: 600px) {
+    .cookie-banner {
+        display: block;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        width: auto;
+        padding: 12px 14px;
+    }
+
+    .cookie-banner-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .cookie-banner-button {
+        flex: 1;
+        text-align: center;
+    }
+
+    .cookie-banner-text {
+        white-space: normal;
+    }
+}

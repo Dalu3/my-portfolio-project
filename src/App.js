@@ -13,6 +13,7 @@ import "./styles/projects.css"
 import './styles/responsive-small.css';
 import './styles/responsive-mid.css';
 import './styles/responsive-large.css';
+import './styles/cookie-banner.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import About from './components/About';
@@ -21,6 +22,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -76,6 +78,7 @@ function App() {
             <Contact />
           </section>
           <Footer />
+          <CookieBanner />
         </div>
       )}
     </>

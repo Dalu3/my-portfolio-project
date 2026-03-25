@@ -8,9 +8,12 @@ export default function About() {
       <div className="about-container">
         <div className="about-text">
           <p>
-            I’m Daria, a front-end web developer. I focus on building websites that are not only visually clean but also clear, fast, and easy to use. I pay close attention to structure, performance, and user experience, making sure every detail works together. I enjoy turning ideas into real, working products that deliver value.
+            I’m Daria, a front-end web developer based in Aberdeen, UK. I focus on building websites that are visually clean, fast, and easy to use, with careful attention to structure, performance, and user experience.
           </p>
-          <p>Here are a few technologies I’ve been working with recently:</p>
+          <p>
+            I help businesses and personal brands create modern websites that are responsive, accessible, and built to support long-term growth.
+          </p>
+          <p className="about-tech-intro">Here are a few technologies I’ve been working with recently:</p>
           <div className="about-technologies">
             <ul className="about-technologies-column">
               <li>HTML & CSS</li>
@@ -35,7 +38,7 @@ export default function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={photo} alt="Daria Lysunets" />
+            <img src={photo} alt="Portrait of Daria Lysunets, front-end web developer" />
           </a>
         </div>
       </div>

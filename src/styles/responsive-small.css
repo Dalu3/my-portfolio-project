@@ -10,6 +10,9 @@
         min-height: 80vh;
         text-align: center;
     }
+    .footer-link-cv {
+        font-size: 15px;
+    }
     .title-greeting {
         font-size: 15px;
         margin-bottom: 10px;
@@ -34,8 +37,10 @@
         margin-top: 10px;
     }
     .title-button:hover {
-        background-color: #45a29e;
-        color: black;
+        background-color: transparent;
+        color: white;
+        border-color: #66c8c2;
+        box-shadow: 0 0 8px rgba(69, 162, 158, 0.22);
     }
     .vertical-text {
         display: none;
@@ -125,6 +130,12 @@
         width: 100%;
     }
 
+    .about-image a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .about-image img {
         max-width: 200px;
         border-radius: 10%;
@@ -134,20 +145,28 @@
     }
 
     .about-technologies {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: clamp(3px, 2.4vw, 10px);
         row-gap: 10px;
         width: 100%;
-        margin: 20px auto 1px;
-        justify-items: center;
+        max-width: 100%;
+        margin: 18px auto 2px;
+        justify-items: start;
         order: 2;
     }
     .about-technologies .about-technologies-column {
-        width: auto;
+        width: 100%;
     }
     .about-technologies li {
-        font-size: 15px;
-        white-space: normal;
-        line-height: 1.8;
+        font-size: 11px;
+        white-space: nowrap;
+        line-height: 1.55;
+        padding-left: 10px;
+    }
+    .about-technologies li::before {
+        left: 0;
+        top: -1px;
+        font-size: 11px;
     }
 
     .section-title {
@@ -160,10 +179,14 @@
         display: flex;
         gap: 40px;
         flex-direction: column;
-        margin: 10px 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 60px auto 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
         align-items: center;
         padding-top: 0px;
-        margin-top: 60px;
     }
 
     .project-card {
@@ -226,6 +249,11 @@
         margin-bottom: 5px;
     }
 
+    .contact-main-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .contact-get-in-touch {
         font-size: 28px;
         padding-top: 10px;
@@ -254,8 +282,8 @@
         border: none;
         border-top: 1px solid #b9b9b9;
         width: 100%;
-        margin-top: 100px;
-        margin-bottom: 60px;
+        margin-top: 72px;
+        margin-bottom: 30px;
     }
 
     .footer-message {
@@ -268,7 +296,7 @@
         gap: 5px;
         margin-top: 0px;
         padding-top: 0px;
-        margin-bottom: 90px;
+        margin-bottom: 4px;
     }
 
     .footer-icon-link {
@@ -395,5 +423,27 @@
         width: 80px;
         cursor: pointer;
         margin: 0px;
+    }
+}
+
+@media screen and (min-width: 20px) and (max-width: 414px) {
+    .contact-paragraph {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-text {
+        padding: 0 20px;
+    }
+
+    .about-text p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-tech-intro,
+    .about-technologies {
+        display: none;
     }
 }

@@ -70,7 +70,7 @@ export default function Header() {
         <img
           className="header-logo"
           src={logo}
-          alt="Logo"
+          alt="Daria Lysunets logo"
           onClick={refreshPage}
           style={{ cursor: "pointer" }}
         />
