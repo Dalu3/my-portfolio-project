@@ -162,25 +162,8 @@
     }
     .section-title {
         font-size: 25px;
-        position: relative;
-        display: inline-block;
-        padding: 10px 1px;
-    }
-    .section-title::before,
-    .section-title::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 250px;
-        height: 1px;
-        background-color: white;
-        transform: translateY(-50%);
-    }
-    .section-title::before {
-        left: -310px;
-    }
-    .section-title::after {
-        right: -310px;
+        gap: 28px;
+        padding-block: 10px;
     }
     .projects-container {
         display: flex;

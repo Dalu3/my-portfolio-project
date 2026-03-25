@@ -63,28 +63,24 @@
     font-size: 40px;
     font-weight: bold;
     color: white;
-    position: relative;
-    display: inline-block;
-    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding-block: 12px;
+    white-space: nowrap;
 }
 
 .section-title::before,
 .section-title::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    width: 300px;
+    flex: 1 1 0;
+    min-width: 0;
     height: 1px;
     background-color: white;
-    transform: translateY(-50%);
-}
-
-.section-title::before {
-    left: -330px;
-}
-
-.section-title::after {
-    right: -330px;
 }
 
 .technologies {
