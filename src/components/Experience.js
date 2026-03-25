@@ -73,6 +73,7 @@ export default function Experience() {
     let animationFrameId = null;
     let currentProgress = 0;
     let targetProgress = 0;
+    let lastFrameTime = null;
 
     const getTargetProgress = () => {
       const rect = timeline.getBoundingClientRect();
@@ -92,14 +93,20 @@ export default function Experience() {
         const dotRect = dot.getBoundingClientRect();
         const dotCenterInTimeline = dotRect.top - rect.top + dotRect.height / 2;
         const isVisible = dot.classList.contains("is-visible");
-        dot.classList.toggle("is-active", isVisible && dotCenterInTimeline <= filledHeight + 4);
+        const isCurrentlyActive = dot.classList.contains("is-active");
+        const activationEdge = isCurrentlyActive ? filledHeight + 12 : filledHeight - 2;
+        dot.classList.toggle("is-active", isVisible && dotCenterInTimeline <= activationEdge);
       });
     };
 
-    const animateProgress = () => {
-      currentProgress = lerp(currentProgress, targetProgress, 0.14);
+    const animateProgress = (timestamp) => {
+      const delta = lastFrameTime ? timestamp - lastFrameTime : 16;
+      lastFrameTime = timestamp;
+      const ease = 1 - Math.exp(-delta / 180);
 
-      if (Math.abs(targetProgress - currentProgress) < 0.0015) {
+      currentProgress = lerp(currentProgress, targetProgress, ease);
+
+      if (Math.abs(targetProgress - currentProgress) < 0.0008) {
         currentProgress = targetProgress;
       }
 
@@ -109,12 +116,14 @@ export default function Experience() {
         animationFrameId = window.requestAnimationFrame(animateProgress);
       } else {
         animationFrameId = null;
+        lastFrameTime = null;
       }
     };
 
     const requestUpdate = () => {
       targetProgress = getTargetProgress();
       if (animationFrameId !== null) return;
+      lastFrameTime = null;
       animationFrameId = window.requestAnimationFrame(animateProgress);
     };
 
@@ -152,6 +161,7 @@ export default function Experience() {
       if (animationFrameId !== null) {
         window.cancelAnimationFrame(animationFrameId);
       }
+      lastFrameTime = null;
     };
   }, []);
 

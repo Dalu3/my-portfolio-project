@@ -312,7 +312,7 @@
     background: linear-gradient(180deg, #6bc7c1 0%, #44a49e 100%);
     transform: scaleY(var(--timeline-progress));
     transform-origin: top;
-    transition: transform 0.08s linear;
+    transition: transform 0.16s cubic-bezier(0.22, 0.61, 0.36, 1);
     will-change: transform;
     pointer-events: none;
     z-index: 1;
@@ -329,7 +329,7 @@
     background: linear-gradient(145deg, #e3e9ef 0%, #b0bac6 100%);
     border: 1px solid #e8eff5;
     box-sizing: border-box;
-    transition: opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1), background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+    transition: opacity 0.82s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.82s cubic-bezier(0.22, 0.61, 0.36, 1), background-color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
     z-index: 3;
     overflow: hidden;
     box-shadow:
@@ -344,18 +344,18 @@
     border-radius: 50%;
     background: #92a0af;
     opacity: 1;
-    transform: scale(0.95);
-    transition: opacity 0.45s ease, transform 0.45s ease, background-color 0.45s ease;
+    transform: scale(0.94);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.6s ease;
 }
 
 #experience .timeline .timeline-dot.is-visible {
     opacity: 1;
-    transform: scale(0.9);
+    transform: scale(0.93);
 }
 
 #experience .timeline .timeline-dot.is-active {
     opacity: 1;
-    transform: scale(1.04);
+    transform: scale(1.02);
     background: linear-gradient(135deg, #6bc7c1 0%, #44a49e 100%);
     border-color: #66fcf1;
     box-shadow:

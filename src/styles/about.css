@@ -6,8 +6,8 @@
 .about-container {
     display: flex;
     justify-content: start;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: stretch;
+    gap: 24px;
     margin-top: 20px;
     max-width: 1000px;
     margin: 40px auto;
@@ -17,28 +17,72 @@
 }
 
 .about-text {
-    flex: 1;
+    flex: 1 1 auto;
     align-items: flex-start;
     color: #dbdbdb;
     text-align: justify;
-    padding-right: 20px;
+    padding-right: 12px;
 }
 
 .about-text p {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
-    padding-left: 30px;
+    padding-left: 22px;
+}
+
+.about-technologies {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 8px;
+    width: min(100%, 740px);
+    max-width: 100%;
+    margin: 18px 0 0 22px;
+}
+
+.about-technologies .about-technologies-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-technologies li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: white;
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+    white-space: normal;
+}
+
+.about-technologies li::before {
+    content: "▹";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    color: #45a29e;
+    font-size: 18px;
 }
 
 .about-image {
-    flex: 0.5;
-    align-self: flex-start;
+    flex: 0 0 280px;
+    align-self: stretch;
+    display: flex;
+}
+
+.about-image a {
+    width: 100%;
+    display: block;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition:

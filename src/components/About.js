@@ -11,16 +11,21 @@ export default function About() {
             I’m Daria, a front-end web developer. I focus on building websites that are not only visually clean but also clear, fast, and easy to use. I pay close attention to structure, performance, and user experience, making sure every detail works together. I enjoy turning ideas into real, working products that deliver value.
           </p>
           <p>Here are a few technologies I’ve been working with recently:</p>
-          <div className="technologies">
-            <ul>
+          <div className="about-technologies">
+            <ul className="about-technologies-column">
               <li>HTML & CSS</li>
               <li>JavaScript</li>
               <li>Vite</li>
             </ul>
-            <ul>
+            <ul className="about-technologies-column">
               <li>TypeScript</li>
               <li>React</li>
               <li>Git/GitHub</li>
+            </ul>
+            <ul className="about-technologies-column">
+              <li>REST APIs</li>
+              <li>Responsive Design</li>
+              <li>Headless CMS (Strapi)</li>
             </ul>
           </div>
         </div>
