@@ -147,14 +147,17 @@
         justify-content: center;
     }
     .about-technologies {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: 32px;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        justify-items: start;
+        column-gap: 12px;
         width: 100%;
         margin: 20px auto 1px;
         order: 2;
     }
     .about-technologies li {
         font-size: 16px;
+        white-space: nowrap;
     }
     .section-title {
         font-size: 25px;

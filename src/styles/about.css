@@ -34,7 +34,7 @@
 .about-technologies {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 20px;
+    column-gap: 12px;
     row-gap: 8px;
     width: min(100%, 740px);
     max-width: 100%;
@@ -52,7 +52,7 @@
     line-height: 1.8;
     color: white;
     position: relative;
-    padding-left: 24px;
+    padding-left: 30px;
     text-align: left;
     white-space: normal;
 }

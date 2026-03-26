@@ -145,8 +145,8 @@ body {
 
     .about-technologies {
         grid-template-columns: repeat(3, max-content);
-        justify-content: space-between;
-        column-gap: clamp(2px, 1vw, 6px);
+        justify-content: center;
+        column-gap: clamp(8px, 2vw, 18px);
         row-gap: 10px;
         width: 100%;
         max-width: 100%;
@@ -161,7 +161,7 @@ body {
         font-size: 14px;
         white-space: nowrap;
         line-height: 1.6;
-        padding-left: 13px;
+        padding-left: 16px;
     }
     .about-technologies li::before {
         left: 0;

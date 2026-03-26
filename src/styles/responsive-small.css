@@ -146,7 +146,7 @@
 
     .about-technologies {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: clamp(3px, 2.4vw, 10px);
+        column-gap: clamp(2px, 1.6vw, 6px);
         row-gap: 10px;
         width: 100%;
         max-width: 100%;
@@ -161,7 +161,7 @@
         font-size: 11px;
         white-space: nowrap;
         line-height: 1.55;
-        padding-left: 13px;
+        padding-left: 16px;
     }
     .about-technologies li::before {
         left: 0;
