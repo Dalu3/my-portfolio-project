@@ -53,7 +53,6 @@ export default function Experience() {
     const timeline = section.querySelector(".timeline");
     if (!timeline) return;
 
-    const items = Array.from(timeline.querySelectorAll(".timeline-item"));
     const dots = Array.from(timeline.querySelectorAll(".timeline-dot"));
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -95,8 +94,7 @@ export default function Experience() {
       dots.forEach((dot) => {
         const dotRect = dot.getBoundingClientRect();
         const dotCenterInTimeline = dotRect.top - rect.top + dotRect.height / 2;
-        const isVisible = dot.classList.contains("is-visible");
-        dot.classList.toggle("is-active", isVisible && dotCenterInTimeline <= filledHeight + 2);
+        dot.classList.toggle("is-active", dotCenterInTimeline <= filledHeight + 2);
       });
     };
 
@@ -139,23 +137,17 @@ export default function Experience() {
     const dotObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const dot = entry.target.querySelector(".timeline-dot");
-          if (!dot) return;
-
-          dot.classList.toggle("is-visible", entry.isIntersecting);
-          if (!entry.isIntersecting) {
-            dot.classList.remove("is-active");
-          }
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
         });
         requestUpdate();
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.01,
+        rootMargin: "0px 0px -5% 0px",
       }
     );
 
-    items.forEach((item) => dotObserver.observe(item));
+    dots.forEach((dot) => dotObserver.observe(dot));
 
     currentProgress = getRawProgress();
     targetProgress = currentProgress;

@@ -73,10 +73,11 @@
 @media screen and (max-width: 600px) {
     .cookie-banner {
         display: block;
-        left: 12px;
-        right: 12px;
+        left: 8px;
+        right: 8px;
         bottom: 12px;
         width: auto;
+        max-width: none;
         padding: 12px 14px;
     }
 

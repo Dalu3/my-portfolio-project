@@ -37,8 +37,19 @@
     background-color: transparent; 
     border-radius: 40px; 
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
     margin-top: 30px; 
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border-color: #66c8c2;
+    box-shadow: 0 0 10px rgba(69, 162, 158, 0.25);
 }
 
 .form-modal {

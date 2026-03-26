@@ -9,8 +9,6 @@ export default function About() {
         <div className="about-text">
           <p>
             I’m Daria, a front-end web developer based in Aberdeen, UK. I focus on building websites that are visually clean, fast, and easy to use, with careful attention to structure, performance, and user experience.
-          </p>
-          <p>
             I help businesses and personal brands create modern websites that are responsive, accessible, and built to support long-term growth.
           </p>
           <p className="about-tech-intro">Here are a few technologies I’ve been working with recently:</p>

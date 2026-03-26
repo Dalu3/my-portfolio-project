@@ -165,10 +165,14 @@
         display: flex;
         gap: 40px;
         flex-direction: column;
-        margin: 10px 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 60px auto 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
         align-items: center;
         padding-top: 0px;
-        margin-top: 60px;
     }
     .project-card {
         padding: 20px;
