@@ -136,7 +136,8 @@ body {
     }
 
     .about-image img {
-        max-width: 200px;
+        width: clamp(230px, 56vw, 280px);
+        max-width: 100%;
         border-radius: 10%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         transition: none;
