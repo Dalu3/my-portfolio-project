@@ -75,44 +75,6 @@
             }
         </style>
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDSBSC4T7"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            window.gtag = gtag;
-
-            gtag("js", new Date());
-            gtag("consent", "default", { analytics_storage: "denied" });
-            gtag("config", "G-HZDSBSC4T7");
-
-            (function () {
-                var consent = null;
-                try {
-                    consent = window.localStorage.getItem("cookie-consent");
-                } catch (e) {
-                    consent = null;
-                }
-
-                if (consent === "accepted") {
-                    gtag("consent", "update", { analytics_storage: "granted" });
-                } else if (consent === "declined") {
-                    gtag("consent", "update", { analytics_storage: "denied" });
-                }
-
-                window.addEventListener("cookie-consent-updated", function (event) {
-                    var value = event && event.detail ? event.detail.consent : null;
-                    if (value === "accepted") {
-                        gtag("consent", "update", { analytics_storage: "granted" });
-                    } else if (value === "declined") {
-                        gtag("consent", "update", { analytics_storage: "denied" });
-                    }
-                });
-            })();
-        </script>
-
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",

@@ -14,7 +14,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 80vh;
+        min-height: calc(100svh - 64px);
         text-align: center;
     }
     .title-greeting {
@@ -110,7 +110,7 @@ body {
     }
     .about-text {
         padding: 0;
-        margin: 0px 20px;
+        margin: 0 12px;
     }
 
     .about-text p {
@@ -145,21 +145,22 @@ body {
     }
 
     .about-technologies {
-        grid-template-columns: repeat(3, max-content);
-        justify-content: center;
-        column-gap: clamp(8px, 2vw, 18px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: stretch;
+        column-gap: clamp(4px, 1.2vw, 10px);
         row-gap: 10px;
         width: 100%;
         max-width: 100%;
-        margin: 18px auto 2px;
-        justify-items: start;
+        margin: 18px 0 2px;
+        justify-items: stretch;
         order: 2;
     }
     .about-technologies .about-technologies-column {
-        width: max-content;
+        width: 100%;
+        min-width: 0;
     }
     .about-technologies li {
-        font-size: 14px;
+        font-size: 15px;
         white-space: nowrap;
         line-height: 1.6;
         padding-left: 16px;
@@ -167,7 +168,7 @@ body {
     .about-technologies li::before {
         left: 0;
         top: -1px;
-        font-size: 14px;
+        font-size: 15px;
     }
     .section-title {
         font-size: 25px;

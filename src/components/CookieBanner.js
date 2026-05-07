@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from "react";
-
-const CONSENT_KEY = "cookie-consent";
+import {
+  applyConsent,
+  CONSENT_ACCEPTED,
+  CONSENT_REJECTED,
+  getStoredConsent,
+  setStoredConsent,
+} from "../utils/consent";
 
 function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const savedConsent = window.localStorage.getItem(CONSENT_KEY);
+    const savedConsent = getStoredConsent();
+
+    if (savedConsent) {
+      applyConsent(savedConsent);
+      return;
+    }
+
+    applyConsent(null);
+
     if (!savedConsent) {
       setIsVisible(true);
     }
   }, []);
 
   const handleConsent = (value) => {
-    window.localStorage.setItem(CONSENT_KEY, value);
+    setStoredConsent(value);
+    applyConsent(value);
     setIsVisible(false);
-
-    if (typeof window.gtag === "function") {
-      window.gtag("consent", "update", {
-        analytics_storage: value === "accepted" ? "granted" : "denied",
-      });
-    }
 
     window.dispatchEvent(
       new CustomEvent("cookie-consent-updated", {
@@ -42,14 +50,14 @@ function CookieBanner() {
         <button
           type="button"
           className="cookie-banner-button cookie-banner-button-secondary"
-          onClick={() => handleConsent("declined")}
+          onClick={() => handleConsent(CONSENT_REJECTED)}
         >
-          Decline
+          Reject
         </button>
         <button
           type="button"
           className="cookie-banner-button cookie-banner-button-primary"
-          onClick={() => handleConsent("accepted")}
+          onClick={() => handleConsent(CONSENT_ACCEPTED)}
         >
           Accept
         </button>

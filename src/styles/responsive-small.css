@@ -7,7 +7,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 80vh;
+        min-height: calc(100svh - 64px);
         text-align: center;
     }
     .footer-link-cv {
@@ -109,7 +109,7 @@
     }
     .about-text {
         /* padding: 30px auto; */
-        padding: 0 10px;
+        padding: 0 20px;
         /* margin: 0 20px; */
         /* min-width: 0; */
     }
@@ -147,27 +147,28 @@
 
     .about-technologies {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: clamp(2px, 1.6vw, 6px);
+        column-gap: clamp(2px, 1vw, 5px);
         row-gap: 10px;
         width: 100%;
         max-width: 100%;
-        margin: 18px auto 2px;
-        justify-items: start;
+        margin: 18px 0 2px;
+        justify-items: stretch;
         order: 2;
     }
     .about-technologies .about-technologies-column {
         width: 100%;
+        min-width: 0;
     }
     .about-technologies li {
-        font-size: 11px;
+        font-size: 14px;
         white-space: nowrap;
-        line-height: 1.55;
-        padding-left: 16px;
+        line-height: 1.6;
+        padding-left: 14px;
     }
     .about-technologies li::before {
         left: 0;
         top: -1px;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .section-title {
@@ -436,6 +437,12 @@
     }
 }
 
+@media screen and (max-width: 374px) {
+    .about-technologies {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 20px) and (max-width: 414px) {
     .contact-paragraph {
         max-width: 100%;
@@ -450,10 +457,5 @@
     .about-text p {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    .about-tech-intro,
-    .about-technologies {
-        display: none;
     }
 }
